@@ -7,7 +7,8 @@ import Header from './components/Header/Header'
 function App() {
   const [bookmarks, setBookMarks] =  useState([]);
   const handleAddToBookMarks = blog =>{
-    console.log('adding sonn');
+    const newBookMarks = [...bookmarks, blog]
+    setBookMarks(newBookMarks);
   }
   return (
     <div className='max-w-7xl mx-auto'>
