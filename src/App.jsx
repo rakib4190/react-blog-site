@@ -13,9 +13,14 @@ function App() {
     setBookMarks(newBookMarks);
   }
   // reading time handler
-  const handleMarkAsRead = time =>{
+  const handleMarkAsRead = (time,id) =>{
     setReadingTime(readingTime + time);
+    const reaminingBookMarks = bookMarks.filter(bookMark => bookMark.id !== id);
+    setBookMarks(reaminingBookMarks);
+    
+
   }
+
   return (
     <div className='max-w-7xl mx-auto'>
       <Header></Header>
@@ -23,7 +28,6 @@ function App() {
       <Blogs 
         handleAddToBookMarks = {handleAddToBookMarks} 
         handleMarkAsRead ={handleMarkAsRead}>
-
       </Blogs>
       <BookMarks 
         bookMarks = {bookMarks} 
