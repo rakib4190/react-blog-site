@@ -5,9 +5,9 @@ import BookMarks from './components/BookMarks/BookMarks'
 import Header from './components/Header/Header'
 
 function App() {
-  const [bookmarks, setBookMarks] =  useState([]);
+  const [bookMarks, setBookMarks] =  useState([]);
   const handleAddToBookMarks = blog =>{
-    const newBookMarks = [...bookmarks, blog]
+    const newBookMarks = [...bookMarks, blog]
     setBookMarks(newBookMarks);
   }
   return (
@@ -15,7 +15,7 @@ function App() {
       <Header></Header>
       <div className='flex'>
       <Blogs handleAddToBookMarks = {handleAddToBookMarks} ></Blogs>
-      <BookMarks></BookMarks>
+      <BookMarks bookMarks = {bookMarks}></BookMarks>
       </div>
     </div>
   )
