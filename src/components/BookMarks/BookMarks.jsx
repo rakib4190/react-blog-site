@@ -20,5 +20,6 @@ const BookMarks = ({bookMarks, readingTime}) => {
 };
 BookMarks.propTypes ={
     bookMarks: PropTypes.array,
+    readingTime: PropTypes.func,
 }
 export default BookMarks;

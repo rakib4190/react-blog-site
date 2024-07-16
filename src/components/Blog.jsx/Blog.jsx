@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { FaRegBookmark } from "react-icons/fa";
-import React from 'react';
+
 
 const Blog = ({blog, handleAddToBookMarks, handleMarkAsRead }) => {
         const {cover, title, author_img, author, posted_date, reading_time, hashtags} =blog;
